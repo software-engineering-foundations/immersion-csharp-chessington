@@ -1,0 +1,24 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Chessington.UI.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Chessington.UI">
+    <StackPanel Orientation="Horizontal">
+        <Border BorderBrush="#FFC7A13B" BorderThickness="2" CornerRadius="1">
+            <StackPanel x:Name="GridContainer" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="{Binding CurrentPlayer}" FontWeight="Bold" FontSize="14" />
+            <ListBox ItemsSource="{Binding CapturedPieces}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Image Source="{Binding}" Width="40" Height="40" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+    </StackPanel>
+</Window>

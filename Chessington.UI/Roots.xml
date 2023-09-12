@@ -1,0 +1,4 @@
+﻿<linker>
+    <assembly fullname="Chessington.UI" preserve="All"/>
+    <assembly fullname="Avalonia.Themes.Fluent" preserve="All"/>
+</linker>
